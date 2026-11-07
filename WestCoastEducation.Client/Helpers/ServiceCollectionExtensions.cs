@@ -43,7 +43,7 @@ public static class ServiceCollectionExtensions
         collection.AddTransient<EditCourseViewModel>();
         
         //Repository
-        collection.AddSingleton<IStorageProvider, DataBaseClient>();
+        collection.AddSingleton<IStorageProvider, JsonStorageService>();
         
         //Navigation Helper
         collection.AddSingleton<NavigateBack>(c => 
